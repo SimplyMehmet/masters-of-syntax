@@ -19,7 +19,7 @@
 
 @keyframes fade-top {
     0% {
-        transform: translateY(-100px);
+        transform: translateY(-200px);
         opacity: 0;
     }
 
@@ -35,7 +35,7 @@
 
 @keyframes fade-left {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(-200px);
         opacity: 0;
     }
 
@@ -43,7 +43,7 @@
         opacity: 0;
     }
 
-    100% {
+    80% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -51,7 +51,7 @@
 
 @keyframes fade-bottom {
     0% {
-        transform: translateY(100px);
+        transform: translateY(200px);
         opacity: 0;
     }
 
@@ -99,27 +99,27 @@
 }
 
 .fade-top {
-    animation: fade-top 1s ease-out;
+    animation: fade-top .6s ease-out;
 }
 
 .fade-left {
-    animation: fade-left 1s ease-out;
+    animation: fade-left .6s ease-out;
 }
 
 .fade-bottom {
-    animation: fade-bottom 1s ease-out;
+    animation: fade-bottom .6s ease-out;
 }
 
 .draw {
     width: 0;
-    animation: expand-width .5s 1s linear forwards;
+    animation: expand-width .4s .6s ease-in-out forwards;
 }
 </style>
 
 <template>
     <div class="grid grid-cols-12">
         <div class="col-span-6 pos-relative h-dvh">
-            <div class="banner-image"></div>
+            <!-- <div class="banner-image"></div> -->
         </div>
 
         <div class="col-start-7 col-end-13 mt-6 text-white">
