@@ -19,7 +19,7 @@
 
 @keyframes fade-top {
     0% {
-        transform: translateY(-200px);
+        transform: translateY(-50px);
         opacity: 0;
     }
 
@@ -35,7 +35,7 @@
 
 @keyframes fade-left {
     0% {
-        transform: translateX(-200px);
+        transform: translateX(-30px);
         opacity: 0;
     }
 
@@ -43,7 +43,12 @@
         opacity: 0;
     }
 
-    80% {
+    60% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -51,7 +56,7 @@
 
 @keyframes fade-bottom {
     0% {
-        transform: translateY(200px);
+        transform: translateY(50px);
         opacity: 0;
     }
 
@@ -99,15 +104,18 @@
 }
 
 .fade-top {
-    animation: fade-top .6s ease-out;
+    opacity: 0;
+    animation: fade-top .6s ease-out forwards;
 }
 
 .fade-left {
-    animation: fade-left .6s ease-out;
+    opacity: 0;
+    animation: fade-left .6s ease-out forwards;
 }
 
 .fade-bottom {
-    animation: fade-bottom .6s ease-out;
+    opacity: 0;
+    animation: fade-bottom .6s ease-out forwards;
 }
 
 .draw {
