@@ -88,7 +88,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    animation: slide-in-to-right 2s cubic-bezier(.66, .66, .27, .99);
+    animation: slide-in-to-right 1.5s ease-out;
 }
 
 .logo-text {
@@ -99,20 +99,20 @@
 }
 
 .fade-top {
-    animation: fade-top 1s cubic-bezier(.66, .66, .27, .99);
+    animation: fade-top 1s ease-out;
 }
 
 .fade-left {
-    animation: fade-left 1s cubic-bezier(.66, .66, .27, .99);
+    animation: fade-left 1s ease-out;
 }
 
 .fade-bottom {
-    animation: fade-bottom 1s cubic-bezier(.66, .66, .27, .99);
+    animation: fade-bottom 1s ease-out;
 }
 
 .draw {
     width: 0;
-    animation: expand-width 1s 1s linear forwards;
+    animation: expand-width .5s 1s linear forwards;
 }
 </style>
 
