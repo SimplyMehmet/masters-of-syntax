@@ -14,6 +14,11 @@ export default defineNuxtConfig({
         { rel: "icon", href: "/favicon-16x16.png" },
         { rel: "icon", href: "/favicon-32x32.png" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      ],
+      meta: [
+        { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
+        { name: "theme-color", content: "#010101"},
+        { name: "apple-mobile-web-app-capable", content: "yes"}
       ]
     }
   },
