@@ -1,16 +1,11 @@
-<script setup lang="ts">
-useHead({
-  bodyAttrs: {
-    class: "body"
-  }
-})
-</script>
-
 <style>
 @import './animations.css';
 
-.body {
+html {
   background-color: #010101;
+}
+
+body {
   font-family: 'IBM Plex Sans', serif, sans-serif;
   font-weight: 400;
   margin: 0;
