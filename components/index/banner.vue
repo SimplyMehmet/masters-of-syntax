@@ -35,7 +35,7 @@
 
 @keyframes fade-left {
     0% {
-        transform: translateX(-30px);
+        transform: translateX(-50px);
         opacity: 0;
     }
 
@@ -43,10 +43,6 @@
         opacity: 0;
     }
 
-    60% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 
     100% {
         opacity: 1;
@@ -110,7 +106,7 @@
 
 .fade-left {
     opacity: 0;
-    animation: fade-left .6s ease-out forwards;
+    animation: fade-left .4s ease-out forwards;
 }
 
 .fade-bottom {
@@ -120,7 +116,7 @@
 
 .draw {
     width: 0;
-    animation: expand-width .4s .6s ease-in-out forwards;
+    animation: expand-width .4s .5s ease-in-out forwards;
 }
 </style>
 
