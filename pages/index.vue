@@ -1,3 +1,5 @@
 <template>
-    <banner></banner>
+    <div>
+        <IndexBanner></IndexBanner>
+    </div>
 </template>

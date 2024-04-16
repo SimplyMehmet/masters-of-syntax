@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { unoConfig } from "./uno.config"
+import { googleConfig } from "./google-fonts.config"
 
 export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
+    '@nuxtjs/google-fonts'
   ],
   app: {
     head: {
@@ -24,4 +26,5 @@ export default defineNuxtConfig({
     },
   },
   ...unoConfig,
+  ...googleConfig
 })
