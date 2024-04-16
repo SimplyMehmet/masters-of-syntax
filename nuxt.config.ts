@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { unoConfig } from "./uno.config"
+
 export default defineNuxtConfig({
+  modules: [
+    '@unocss/nuxt',
+  ],
   app: {
     head: {
       link: [
@@ -18,4 +23,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  ...unoConfig,
 })

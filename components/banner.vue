@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-6">
         Hello world!
     </div>
 </template>
