@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "nuxt": "^3.11.2",
-    "tsparticles": "^3.3.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@unocss/nuxt": "^0.59.3"
+    "@tsparticles/engine": "^3.3.0",
+    "@unocss/nuxt": "^0.59.3",
+    "nuxt-particles": "^0.3.0"
   }
 }

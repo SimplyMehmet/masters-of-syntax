@@ -1,1 +1,75 @@
-template
+<script setup lang="ts">
+import type { Container, ISourceOptions } from "@tsparticles/engine";
+
+const options: ISourceOptions = {
+  id: "particles",
+  fullScreen: {
+    enable: false,
+  },
+  background: {
+    color: {
+      value: "#000",
+    },
+  },
+  particles: {
+    color: {
+      value: "#fff",
+    },
+    links: {
+      color: "#fff",
+      enable: true,
+    },
+    move: {
+      enable: true,
+    },
+    number: {
+      value: 200,
+    },
+  },
+  detectRetina: true,
+  fpsLimit: 144,
+  interactivity: {
+    detectsOn: "window",
+    events: {
+      onHover: {
+        enable: true,
+        mode: ["grab", "bubble"],
+      },
+      onDiv: {
+        enable: true,
+        mode: "repulse",
+        selectors: "#test",
+        type: "circle",
+      },
+    },
+    modes: {
+      grab: {
+        distance: 200,
+      },
+      bubble: {
+        size: 10,
+      },
+      repulse: {
+        distance: 300,
+      },
+    },
+  },
+};
+
+const onLoad = (container: Container) => {
+  container.play();
+};
+</script>
+
+<template>
+  <div class="pos-relative flex items-center justify-center h-lvh">
+    <NuxtParticles
+      id="particles"
+      :options="options"
+      @load="onLoad"
+      class="pos-absolute top-0 bottom-0 left-0 right-0"
+    />
+
+    <div id="test" class="h-2xl w-2xl bg-bluegray opacity-70"></div>
+  </div>
+</template>

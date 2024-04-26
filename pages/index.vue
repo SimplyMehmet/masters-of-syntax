@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <IndexBanner></IndexBanner>
-        <IndexAbout></IndexAbout>
-    </div>
+  <div>
+    <IndexBanner></IndexBanner>
+    <IndexAbout></IndexAbout>
+    <Particles></Particles>
+  </div>
 </template>
