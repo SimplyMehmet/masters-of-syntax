@@ -1,15 +1,6 @@
 <style>
-@import './animations.css';
-
-html {
-  background-color: #010101;
-}
-
-body {
-  font-family: 'IBM Plex Sans', serif, sans-serif;
-  font-weight: 400;
-  margin: 0;
-}
+@import "./assets/css/animations.css";
+@import "./assets/css/global.css";
 </style>
 
 <template>
