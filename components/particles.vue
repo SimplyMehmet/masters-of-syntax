@@ -8,7 +8,6 @@ const props = defineProps({
 });
 
 const { repulseSelector } = props;
-
 const options: ISourceOptions = {
   id: "particles",
   fullScreen: {
@@ -26,13 +25,14 @@ const options: ISourceOptions = {
     links: {
       color: "#fff",
       enable: true,
+      distance: 80,
     },
     move: {
       enable: true,
       speed: 1,
     },
     number: {
-      value: 200,
+      value: 120,
     },
   },
   detectRetina: true,
@@ -42,7 +42,7 @@ const options: ISourceOptions = {
     events: {
       onHover: {
         enable: true,
-        mode: ["grab", "bubble", "trail"],
+        mode: ["grab", "bubble"],
       },
       onDiv: {
         enable: true,
@@ -73,9 +73,39 @@ const options: ISourceOptions = {
   },
 };
 
+let particlesContainer: Container | null = null;
+let mobile = false;
+
 const onLoad = (container: Container) => {
-  container.play();
+  particlesContainer = container;
+  particlesScreenWidthBasedConfig();
 };
+
+const particlesScreenWidthBasedConfig = () => {
+  if (particlesContainer && window.innerWidth < 764 && !mobile) {
+    mobile = true;
+    particlesContainer.stop();
+    particlesContainer.options.particles.number.value = 40;
+    particlesContainer.start();
+    return;
+  }
+
+  if (particlesContainer && window.innerWidth >= 764 && mobile) {
+    mobile = false;
+    particlesContainer.stop();
+    particlesContainer.options.particles.number.value = 120;
+    particlesContainer.start();
+    return;
+  }
+};
+
+onBeforeMount(() => {
+  window.addEventListener("resize", particlesScreenWidthBasedConfig);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", particlesScreenWidthBasedConfig);
+});
 </script>
 
 <template>
