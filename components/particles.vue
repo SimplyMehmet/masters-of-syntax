@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import type { Container, ISourceOptions } from "@tsparticles/engine";
+const props = defineProps({
+  repulseSelector: {
+    default: "",
+    type: String,
+  },
+});
+
+const { repulseSelector } = props;
 
 const options: ISourceOptions = {
   id: "particles",
@@ -21,6 +29,7 @@ const options: ISourceOptions = {
     },
     move: {
       enable: true,
+      speed: 1,
     },
     number: {
       value: 200,
@@ -33,13 +42,21 @@ const options: ISourceOptions = {
     events: {
       onHover: {
         enable: true,
-        mode: ["grab", "bubble"],
+        mode: ["grab", "bubble", "trail"],
       },
       onDiv: {
         enable: true,
         mode: "repulse",
-        selectors: "#test",
-        type: "circle",
+        selectors: repulseSelector,
+        type: "rectangle",
+      },
+      onClick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: {
+        delay: 0,
+        enable: true,
       },
     },
     modes: {
@@ -50,7 +67,7 @@ const options: ISourceOptions = {
         size: 10,
       },
       repulse: {
-        distance: 300,
+        distance: 1000,
       },
     },
   },
@@ -62,14 +79,10 @@ const onLoad = (container: Container) => {
 </script>
 
 <template>
-  <div class="pos-relative flex items-center justify-center h-lvh">
-    <NuxtParticles
-      id="particles"
-      :options="options"
-      @load="onLoad"
-      class="pos-absolute top-0 bottom-0 left-0 right-0"
-    />
-
-    <div id="test" class="h-2xl w-2xl bg-bluegray opacity-70"></div>
-  </div>
+  <NuxtParticles
+    id="particles"
+    :options="options"
+    @load="onLoad"
+    class="pos-absolute top-0 bottom-0 left-0 right-0"
+  />
 </template>
