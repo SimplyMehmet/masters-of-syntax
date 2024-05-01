@@ -5,7 +5,7 @@
 
       <div
         id="connecting"
-        class="h-96 w-96 flex items-center justify-center mb-40 lg:mb-0"
+        class="h-2xl w-2xl flex items-center justify-center mb-40 lg:mb-0"
       >
         <IndexBanner />
       </div>

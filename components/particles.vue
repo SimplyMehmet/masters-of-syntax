@@ -43,6 +43,11 @@ const options: ISourceOptions = {
       onHover: {
         enable: true,
         mode: ["grab", "bubble"],
+        parallax: {
+          enable: true,
+          smooth: 20,
+          force: 100,
+        },
       },
       onDiv: {
         enable: true,
@@ -113,6 +118,6 @@ onBeforeUnmount(() => {
     id="particles"
     :options="options"
     @load="onLoad"
-    class="pos-absolute top-0 bottom-0 left-0 right-0"
+    class="pos-absolute -top-10 -bottom-10 -left-10 -right-10"
   />
 </template>
