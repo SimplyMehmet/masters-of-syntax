@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="pos-relative flex justify-end items-center h-lvh">
+    <div
+      class="pos-relative flex justify-end items-center h-lvh overflow-hidden"
+    >
       <Particles repulse-selector="#connecting"></Particles>
 
       <div
