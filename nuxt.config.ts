@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { unoConfig } from "./assets/config/uno.config";
 import { googleConfig } from "./assets/config//google-fonts.config";
 import { particlesConfig } from "./assets/config/particles.config";

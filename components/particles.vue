@@ -1,29 +1,51 @@
 <script setup lang="ts">
 import type { Container, ISourceOptions } from "@tsparticles/engine";
 const props = defineProps({
+  container: {
+    default: "particles",
+    type: String,
+  },
   repulseSelector: {
     default: "",
     type: String,
   },
+  backgroundColor: {
+    default: '#000',
+    type: String,
+  },
+  particleColor: {
+    default: '#fff',
+    type: String,
+  },
+  linkColor: {
+    default: '#fff',
+    type: String,
+  }
 });
 
-const { repulseSelector } = props;
+const {
+  repulseSelector,
+  backgroundColor,
+  particleColor,
+  linkColor
+} = props;
+
 const options: ISourceOptions = {
-  id: "particles",
+  id: 'particles',
   fullScreen: {
     enable: false,
   },
   background: {
     color: {
-      value: "#000",
+      value: backgroundColor,
     },
   },
   particles: {
     color: {
-      value: "#fff",
+      value: particleColor,
     },
     links: {
-      color: "#fff",
+      color: linkColor,
       enable: true,
       distance: 80,
     },
@@ -49,12 +71,6 @@ const options: ISourceOptions = {
           force: 100,
         },
       },
-      onDiv: {
-        enable: true,
-        mode: "repulse",
-        selectors: repulseSelector,
-        type: "rectangle",
-      },
       onClick: {
         enable: true,
         mode: "push",
@@ -62,6 +78,12 @@ const options: ISourceOptions = {
       resize: {
         delay: 0,
         enable: true,
+      },
+      onDiv: {
+        enable: !!repulseSelector,
+        mode: "repulse",
+        selectors: repulseSelector,
+        type: "rectangle",
       },
     },
     modes: {
@@ -87,7 +109,8 @@ const onLoad = (container: Container) => {
 };
 
 const particlesScreenWidthBasedConfig = () => {
-  if (particlesContainer && window.innerWidth < 764 && !mobile) {
+  if (!particlesContainer) { return; }
+  if (window.innerWidth < 764 && !mobile) {
     mobile = true;
     particlesContainer.stop();
     particlesContainer.options.particles.number.value = 40;
@@ -95,13 +118,15 @@ const particlesScreenWidthBasedConfig = () => {
     return;
   }
 
-  if (particlesContainer && window.innerWidth >= 764 && mobile) {
+  if (window.innerWidth >= 764 && mobile) {
     mobile = false;
     particlesContainer.stop();
     particlesContainer.options.particles.number.value = 120;
     particlesContainer.start();
     return;
   }
+
+
 };
 
 onBeforeMount(() => {
@@ -114,10 +139,6 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <NuxtParticles
-    id="particles"
-    :options="options"
-    @load="onLoad"
-    class="pos-absolute -top-10 -bottom-10 -left-10 -right-10"
-  />
+  <NuxtParticles id="particles" :options="options" @load="onLoad"
+    class="pos-absolute -top-10 -bottom-10 -left-10 -right-10 z-0" />
 </template>
