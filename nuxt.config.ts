@@ -3,7 +3,12 @@ import { googleConfig } from "./assets/config//google-fonts.config";
 import { particlesConfig } from "./assets/config/particles.config";
 
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@nuxtjs/google-fonts", "nuxt-particles"],
+  modules: [
+    "@unocss/nuxt",
+    "@nuxtjs/google-fonts",
+    "nuxt-particles",
+    "@nuxt/image",
+  ],
   app: {
     head: {
       link: [
@@ -29,6 +34,9 @@ export default defineNuxtConfig({
         usePolling: true,
       },
     },
+  },
+  image: {
+    dir: "assets/img",
   },
   ...unoConfig,
   ...googleConfig,
