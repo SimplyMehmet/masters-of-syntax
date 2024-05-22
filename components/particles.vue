@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Container, ISourceOptions } from "@tsparticles/engine";
+const emit = defineEmits(["loaded"])
 const props = defineProps({
   container: {
     default: "particles",
@@ -106,6 +107,7 @@ let mobile = false;
 const onLoad = (container: Container) => {
   particlesContainer = container;
   particlesScreenWidthBasedConfig();
+  emit("loaded");
 };
 
 const particlesScreenWidthBasedConfig = () => {
@@ -125,8 +127,6 @@ const particlesScreenWidthBasedConfig = () => {
     particlesContainer.start();
     return;
   }
-
-
 };
 
 onBeforeMount(() => {

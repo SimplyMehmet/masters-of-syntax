@@ -1,3 +1,6 @@
 <template>
-  <IndexProjects />
+  <LazyIndexIntro />
+  <LazyIndexAbout />
+  <LazyIndexSkills />
+  <LazyIndexProjects />
 </template>
