@@ -1,9 +1,21 @@
+:root {
+  --c-white: #FFFAFF;
+  --c-black: #050401;
+  --c-grey: #787888;
+  --c-purple: #39304A;
+  --c-dark-blue: #202030;
+  --c-beige: #7D7461;
+
+  --c-font-pt-serif: "PT Serif";
+  --c-font-league-gothic: "League Gothic";
+}
+
 html {
-  background-color: #010101;
+  background-color: var(--c-white);
 }
 
 body {
-  font-family: "IBM Plex Sans", serif, sans-serif;
+  font-family: var(--c-font-league-gothic), serif, sans-serif;
   font-weight: 400;
   margin: 0;
 }
