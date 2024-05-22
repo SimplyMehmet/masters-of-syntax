@@ -21,7 +21,8 @@ export const unoConfig: Record<string, UnocssNuxtOptions> = {
       },
     },
     shortcuts: {
-      container: "px-4 mx-auto",
+      container:
+        "px-4 mx-auto sm:w-576px md:w-746px lg:w-988px xl:w-1200px 2xl:w-1400px",
     },
   },
 };
