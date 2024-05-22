@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: var(--c-font-league-gothic), serif, sans-serif;
+  font-family: var(--c-font-pt-serif), serif, sans-serif;
   font-weight: 400;
   margin: 0;
 }
