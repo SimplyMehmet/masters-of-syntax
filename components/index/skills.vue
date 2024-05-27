@@ -3,35 +3,35 @@
 const disciplines = ref([{
     name: "Front-end",
     skills: [{
-        img: "/logo/angular.svg",
+        img: "/img/logo/angular.svg",
         name: "Angular"
     }, {
-        img: "/logo/rxjs.svg",
+        img: "/img/logo/rxjs.svg",
         name: "rxJS"
     }, {
-        img: "/logo/nuxtjs.svg",
+        img: "/img/logo/nuxt.png",
         name: "Nuxt"
     }, {
-        img: "/logo/vuejs.svg",
+        img: "/img/logo/vue.png",
         name: "Vue"
     }],
 },
 {
     name: "Back-end",
     skills: [{
-        img: "/logo/net.svg",
+        img: "/img/logo/net.svg",
         name: "ASP.NET"
     }, {
-        img: "/logo/golang.svg",
+        img: "/img/logo/golang.svg",
         name: "Golang"
     }, {
-        img: "/logo/gin-gonic.svg",
+        img: "/img/logo/gin-gonic.svg",
         name: "Gin-gonic"
     }, {
-        img: "/logo/nodejs.svg",
+        img: "/img/logo/nodejs.svg",
         name: "NodeJS"
     }, {
-        img: "/logo/expressjs.svg",
+        img: "/img/logo/expressjs.svg",
         name: "ExpressJS"
     }],
 
@@ -39,40 +39,40 @@ const disciplines = ref([{
 {
     name: "Dev-ops/other",
     skills: [{
-        img: "/logo/Azure.svg",
+        img: "/img/logo/azure.svg",
         name: "Azure"
     }, {
-        img: "/logo/azure.svg",
+        img: "/img/logo/gcp.svg",
         name: "GCP"
     }, {
-        img: "/logo/alloydb.svg",
+        img: "/img/logo/alloydb.svg",
         name: "AlloyDB"
     }, {
-        img: "/logo/psql.svg",
+        img: "/img/logo/psql.svg",
         name: "PSQL"
     }, {
-        img: "/logo/mysql.svg",
+        img: "/img/logo/mysql.svg",
         name: "MySQL"
     }, {
-        img: "/logo/mssql.svg",
+        img: "/img/logo/mssql.svg",
         name: "MSSQL"
     }, {
-        img: "/logo/linux.svg",
+        img: "/img/logo/linux.svg",
         name: "Linux"
     }, {
-        img: "/logo/docker.svg",
+        img: "/img/logo/docker.svg",
         name: "Docker"
     }, {
-        img: "/logo/kubernetes.svg",
+        img: "/img/logo/kubernetes.svg",
         name: "Kubernetes"
     }, {
-        img: "/logo/terraform.svg",
+        img: "/img/logo/terraform.svg",
         name: "Terraform"
     }, {
-        img: "/logo/cicd.svg",
+        img: "/img/logo/cicd.svg",
         name: "CI/CD"
     }, {
-        img: "/logo/git.svg",
+        img: "/img/logo/git.svg",
         name: "Git"
     }],
 }]);
@@ -83,18 +83,25 @@ const disciplines = ref([{
     <div class="container">
         <h1 class="font-league-gothic font-400 text-24px underline">Skills</h1>
     </div>
-    <div class="container-mobile-full md:mx-auto md:px-4 grid">
-        <div v-for="(discipline, index) of disciplines" class="bg-c-purple col-span-12 " :class="{
-            'mb-0.5': index != disciplines.length - 1
+    <div class="container-mobile-full md:mx-auto md:px-4 md:flex md:justify-between">
+        <div v-for="(discipline, index) of disciplines" class="bg-c-purple md:max-w-400px w-100% flex flex-col" :class="{
+            'mb-0.5': index != disciplines.length - 1,
+            'mx-3': index != 0 && index != disciplines.length - 1,
         }">
             <div class="flex justify-between items-center px-4">
                 <span class="c-white py-4 font-league-gothic text-24px">{{ discipline.name }}</span>
-                <NuxtImg class="md:hidden" src="/icon/chevron.svg" lazy="true" />
+                <img class="md:hidden" src="/img/icon/chevron.svg" />
             </div>
-            <div class="px-4 bg-c-white border-b-10 border-b-solid border-b-c-purple grid grid-cols-12">
-                <div class="col-span-6" v-for="skill of discipline.skills">
-                    <NuxtImg :src="skill.img" lazy="true" />
-                    <span>{{ skill.name }}</span>
+            <div
+                class="px-4 bg-c-white border-b-6 border-b-solid border-b-c-purple 
+                md:border-l-6 md:border-r-6 md:border-l-solid md:border-r-solid md:border-l-c-purple md:border-r-c-purple md:h-[100%]">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-6" v-for="skill of discipline.skills">
+                        <div class="flex items-center my-3 h-36px md:h-53px">
+                            <img :src="skill.img" class="max-w-36px max-h-36px lg:max-w-53px lg:max-h-53px" />
+                            <span class="ml-4 text-14px md:text-20px">{{ skill.name }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

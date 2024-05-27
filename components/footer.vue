@@ -9,24 +9,24 @@
                 <div>
                     <a class="c-white no-underline text-14px flex items-center mb-3 md:text-16px"
                         href="mailto:mehmet@mastersofsyntax.nl">
-                        <NuxtImg src="/icon/mail.svg" class="w-24px md:w-30px mr-4" />
+                        <img src="/img/icon/mail.svg" class="w-24px md:w-30px mr-4" />
                         <span>Mehmet@mastersofsyntax.nl</span>
                     </a>
                     <a class="c-white no-underline text-14px flex items-center mb-3 md:text-16px"
                         href="tel:+31657943170">
-                        <NuxtImg src="/icon/phone.svg" class="w-24px md:w-30px mr-4" />
+                        <img src="/img/icon/phone.svg" class="w-24px md:w-30px mr-4" />
                         <span>+31&nbsp;6&nbsp;5794&nbsp;3170</span>
                     </a>
                 </div>
                 <div>
                     <a class="c-white no-underline text-14px flex items-center mb-3 md:text-16px"
                         href="https://github.com/simplymehmet">
-                        <NuxtImg src="/logo/github.svg" class="w-24px md:w-30px mr-4" />
+                        <img src="/img/logo/github.svg" class="w-24px md:w-30px mr-4" />
                         <span>SimplyMehmet</span>
                     </a>
                     <a class="c-white no-underline text-14px flex items-center md:text-16px"
                         href="https://www.linkedin.com/in/mehmet-g%C3%B6nen-326886149/">
-                        <NuxtImg src="/logo/linkedin.svg" class="w-24px md:w-30px mr-4" />
+                        <img src="/img/logo/linkedin.svg" class="w-24px md:w-30px mr-4" />
                         <span>Mehmet Gönen</span>
                     </a>
                 </div>

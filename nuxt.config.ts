@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   vite: {
     server: {
@@ -34,9 +35,6 @@ export default defineNuxtConfig({
         usePolling: true,
       },
     },
-  },
-  image: {
-    dir: "assets/img",
   },
   ...unoConfig,
   ...googleConfig,
