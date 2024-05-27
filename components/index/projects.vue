@@ -8,12 +8,13 @@ const showText = () => {
 </script>
 
 <template>
-    <div class="w-full">
-        <div class="container my-7">
-            <h1 class="font-league-gothic underline c-black font-400 my-0 mb-5 text-24px md:text-30px">Projects</h1>
+    <div class="mb-7">
+        <div id="projects" class="h-1px" />
+        <div class="container">
+            <h1 class="font-league-gothic underline c-black font-400 my-0 mb-7 text-24px md:text-30px">Projects</h1>
         </div>
         <div class="md:mx-auto md:px-4 container-mobile-full">
-            <div id="projects" class="h-2xl w-full pos-relative overflow-hidden mb-20">
+            <div id="projects" class="h-lg md:h-2xl w-full pos-relative overflow-hidden mb-20">
                 <Particles :container="'#projects'" :background-color="colors.cPurple" :link-color="colors.cWhite"
                     :particle-color="colors.cWhite" @loaded="showText" />
                 <div class="pos-absolute z-1 top-[calc(50%-75px)] left-[calc(50%-200px)]

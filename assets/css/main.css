@@ -1,2 +1,6 @@
 @import "animations.css";
 @import "global.css";
+
+html {
+    scroll-behavior: smooth;
+}
