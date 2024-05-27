@@ -1,6 +1,10 @@
+<script setup lang="ts">
+    import { PageSection } from '~/assets/enums/page-section';
+</script>
+
 <template>
     <div class="bg-c-purple">
-        <div id="about" class="h-1px" />
+        <div :id="PageSection.About" class="h-1px" />
         <div class="container py-7">
             <div class="max-w-700px">
                 <h1 class="font-league-gothic underline c-white font-400 my-0 mb-5 text-24px md:text-30px">

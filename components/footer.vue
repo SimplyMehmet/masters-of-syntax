@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import { PageSection } from '~/assets/enums/page-section';
+
+
+</script>
+
 <template>
     <div class="bg-c-purple w-full">
-        <div id="contact" />
+        <div :id="PageSection.Contact" />
         <div class="container grid">
             <h1 class="c-white text-24px font-league-gothic font-400 underline my-0 pt-5 pb-2 col-span-12 md:text-30px">
                 Contact</h1>
