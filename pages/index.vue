@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <IndexBanner></IndexBanner>
-        <IndexAbout></IndexAbout>
-    </div>
+  <IndexIntro />
+  <IndexAbout />
+  <IndexSkills />
+  <IndexProjects />
 </template>

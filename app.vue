@@ -1,19 +1,7 @@
-<style>
-@import './animations.css';
-
-html {
-  background-color: #010101;
-}
-
-body {
-  font-family: 'IBM Plex Sans', serif, sans-serif;
-  font-weight: 400;
-  margin: 0;
-}
-</style>
-
 <template>
   <div>
+    <Header />
     <NuxtPage />
+    <Footer />
   </div>
 </template>

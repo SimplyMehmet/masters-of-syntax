@@ -1,0 +1,22 @@
+:root {
+  --c-white: #FFFAFF;
+  --c-black: #050401;
+  --c-grey: #787888;
+  --c-purple: #39304A;
+  --c-purple-see-through: rgba(57, 48, 74, .9);
+  --c-dark-blue: #202030;
+  --c-beige: #7D7461;
+
+  --c-font-pt-serif: "PT Serif";
+  --c-font-league-gothic: "League Gothic";
+}
+
+html {
+  background-color: var(--c-white);
+}
+
+body {
+  font-family: var(--c-font-pt-serif), serif, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}

@@ -1,11 +1,13 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import { unoConfig } from "./uno.config"
-import { googleConfig } from "./google-fonts.config"
+import { unoConfig } from "./assets/config/uno.config";
+import { googleConfig } from "./assets/config//google-fonts.config";
+import { particlesConfig } from "./assets/config/particles.config";
 
 export default defineNuxtConfig({
   modules: [
-    '@unocss/nuxt',
-    '@nuxtjs/google-fonts'
+    "@unocss/nuxt",
+    "@nuxtjs/google-fonts",
+    "nuxt-particles",
+    "@nuxt/image",
   ],
   app: {
     head: {
@@ -16,12 +18,16 @@ export default defineNuxtConfig({
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       ],
       meta: [
-        { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
-        { name: "theme-color", content: "#010101"},
-        { name: "apple-mobile-web-app-capable", content: "yes"}
-      ]
-    }
+        {
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "default",
+        },
+        { name: "theme-color", content: "#FFFAFF" },
+        { name: "apple-mobile-web-app-capable", content: "yes" },
+      ],
+    },
   },
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   vite: {
     server: {
@@ -31,5 +37,6 @@ export default defineNuxtConfig({
     },
   },
   ...unoConfig,
-  ...googleConfig
-})
+  ...googleConfig,
+  ...particlesConfig,
+});
