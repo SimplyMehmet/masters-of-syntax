@@ -132,11 +132,11 @@ const disciplines = ref([{
                             'transform-rotate-180': discipline.name == activeDiscipline
                         }" />
                     </div>
-                    <div class="px-4 bg-c-white border-b-6 border-b-solid border-b-c-purple 
+                    <div class="px-4 bg-c-white md:border-b-6 md:border-b-solid md:border-b-c-purple 
                 md:border-l-6 md:border-r-6 md:border-l-solid md:border-r-solid md:border-l-c-purple md:border-r-c-purple md:h-[100%] overflow-hidden transition transition-duration-1000"
                         :class="{
                             'h-0%': activeDiscipline != discipline.name,
-                            'h-100%': activeDiscipline == discipline.name
+                            'h-100% border-b-6 border-b-solid border-b-c-purple': activeDiscipline == discipline.name
                         }">
                         <div class="grid grid-cols-12">
                             <div class="col-span-6" v-for="skill of discipline.skills">
