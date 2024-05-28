@@ -3,6 +3,7 @@
   --c-black: #050401;
   --c-grey: #787888;
   --c-purple: #39304A;
+  --c-purple-see-through: rgba(57, 48, 74, .9);
   --c-dark-blue: #202030;
   --c-beige: #7D7461;
 
@@ -15,7 +16,7 @@ html {
 }
 
 body {
-  font-family: var(--c-font-league-gothic), serif, sans-serif;
+  font-family: var(--c-font-pt-serif), serif, sans-serif;
   font-weight: 400;
   margin: 0;
 }

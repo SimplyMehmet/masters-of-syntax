@@ -1,3 +1,6 @@
 <template>
-  <h1>Some text!</h1>
+  <IndexIntro />
+  <IndexAbout />
+  <IndexSkills />
+  <IndexProjects />
 </template>
