@@ -3,8 +3,8 @@ import { PageSection } from '~/assets/enums/page-section';
 
 const mobileNavActive = ref(false);
 
-const OpenMobileNav = () => {
-    mobileNavActive.value = true;
+const toggleMobileNav = () => {
+    mobileNavActive.value = !mobileNavActive.value;
 }
 
 const ScrollToSection = (section: PageSection): void => {
@@ -22,15 +22,18 @@ const ScrollToSection = (section: PageSection): void => {
     <div class="md:hidden">
         <div class="pos-fixed left-0 right-0 bg-c-white z-2">
             <div class="border-b-2px border-b-c-purple border-b-solid flex justify-end">
-                <div @click="OpenMobileNav()" class="pos-relative h-20px w-20px m-5">
-                    <span class="h-2px bg-c-black w-24px pos-absolute top-0">&nbsp;</span>
-                    <span class="h-2px bg-c-black w-24px pos-absolute top-9px">&nbsp;</span>
-                    <span class="h-2px bg-c-black w-24px pos-absolute bottom-0">&nbsp;</span>
+                <div @click="toggleMobileNav()" class="pos-relative h-20px w-20px m-5">
+                    <span class="h-2px bg-c-black w-24px pos-absolute top-0 transition-all transition-duration-200"
+                        :class="{ 'top-9px transform-rotate-45': mobileNavActive }">&nbsp;</span>
+                    <span class="h-2px bg-c-black w-24px pos-absolute top-9px transition-all transition-duration-200"
+                        :class="{ 'transform-rotate-45': mobileNavActive }">&nbsp;</span>
+                    <span class="h-2px bg-c-black w-24px pos-absolute bottom-0 transition-all transition-duration-200"
+                        :class="{ 'top-9px transform-rotate-315': mobileNavActive }">&nbsp;</span>
                 </div>
             </div>
         </div>
         <div ref="mobileNav"
-            class="pos-fixed top-62px bottom-0 z-2 w-100% bg-[linear-gradient(90deg,var(--c-white)5%,rgba(255,255,255,.5))] transition-all ease-in-out transition-duration-300"
+            class="pos-fixed top-62px bottom-0 z-2 w-100% bg-[linear-gradient(90deg,var(--c-white)45%,rgba(255,255,255,.5))] transition-all ease-in-out transition-duration-300"
             :class="{
                 'left-0': mobileNavActive,
                 'left-100%': !mobileNavActive

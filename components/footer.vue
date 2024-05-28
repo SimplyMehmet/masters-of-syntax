@@ -11,7 +11,8 @@ import { PageSection } from '~/assets/enums/page-section';
             <h1 class="c-white text-24px font-league-gothic font-400 underline my-0 pt-5 pb-2 col-span-12 md:text-30px">
                 Contact</h1>
             <p class="text-14px c-white my-0 col-span-12 md:col-span-6 md:text-16px">Need a dev to make some great
-                things</p>
+                things? Feel free to call</p>
+
             <div class="pt-5 pb-6 col-span-12 md:col-span-6 md:flex justify-evenly md:pt-0">
                 <div>
                     <a class="c-white no-underline text-14px flex items-center mb-3 md:text-16px"

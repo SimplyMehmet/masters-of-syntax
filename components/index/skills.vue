@@ -27,6 +27,24 @@ const disciplines = ref([{
     }, {
         img: "/img/logo/vue.png",
         name: "Vue"
+    }, {
+        img: "/img/logo/react.svg",
+        name: "React"
+    }, {
+        img: "/img/logo/bootstrap.svg",
+        name: "Bootstrap"
+    }, {
+        img: "/img/logo/redux.svg",
+        name: "Redux"
+    }, {
+        img: "/img/logo/tailwind.svg",
+        name: "Tailwind"
+    }, {
+        img: "/img/logo/scss.svg",
+        name: "SCSS"
+    }, {
+        img: "/img/logo/unocss.svg",
+        name: "UnoCSS"
     }],
 },
 {
@@ -87,6 +105,9 @@ const disciplines = ref([{
     }, {
         img: "/img/logo/git.svg",
         name: "Git"
+    }, {
+        img: "/img/logo/typescript.svg",
+        name: "Typescript"
     }],
 }]);
 
@@ -101,7 +122,7 @@ const disciplines = ref([{
             </div>
             <div class="container-mobile-full md:mx-auto md:px-4 md:flex md:justify-between">
                 <div @click="toggleDiscipline(discipline.name)" v-for="(discipline, index) of disciplines"
-                    class="bg-c-purple md:max-w-400px w-100% flex flex-col" :class="{
+                    class="bg-c-purple md:max-w-420px w-100% flex flex-col" :class="{
                         'mb-0.5': index != disciplines.length - 1,
                         'md:mx-3': index != 0 && index != disciplines.length - 1,
                     }">
