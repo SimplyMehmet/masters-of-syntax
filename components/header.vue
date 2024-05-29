@@ -99,7 +99,7 @@ onMounted(() => {
             </div>
         </div>
         <div class="hidden md:flex opacity-0" :class="{
-            'pos-absolute top-80% left-90% flex-col opacity-100': activePageSection === null,
+            'pos-absolute bottom-5% right-5% flex-col opacity-100': activePageSection === null,
             'pos-fixed top-0 left-0 right-0 bg-c-white z-2 p-4 border-b-2px border-b-c-purple border-b-solid opacity-100 animate-[fade-in_.3s_ease-in-out_forwards]': activePageSection !== null,
         }">
             <span @click="scrollToSection(PageSection.About)"
