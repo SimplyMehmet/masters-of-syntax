@@ -98,20 +98,22 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <div class="hidden md:flex opacity-0 transition-all transition-duration-300  pos-fixed top-0 left-0 right-0 bg-c-white z-2 p-4 border-b-2px border-b-c-purple border-b-solid"
-            :class="{ 'opacity-100': activePageSection !== null, 'pointer-events-none': activePageSection === null }">
+        <div class="hidden md:flex opacity-0" :class="{
+            'pos-absolute top-80% left-90% flex-col opacity-100': activePageSection === null,
+            'pos-fixed top-0 left-0 right-0 bg-c-white z-2 p-4 border-b-2px border-b-c-purple border-b-solid opacity-100 animate-[fade-in_.3s_ease-in-out_forwards]': activePageSection !== null,
+        }">
             <span @click="scrollToSection(PageSection.About)"
-                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer px-4 ml-auto"
-                :class="{ 'underline': activePageSection === PageSection.About }">About</span>
+                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer"
+                :class="{ 'underline': activePageSection === PageSection.About, 'ml-auto px-4': activePageSection !== null }">About</span>
             <span @click="scrollToSection(PageSection.Skills)"
-                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer px-4"
-                :class="{ 'underline': activePageSection === PageSection.Skills }">Skills</span>
+                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer"
+                :class="{ 'underline': activePageSection === PageSection.Skills, 'px-4': activePageSection !== null }">Skills</span>
             <span @click="scrollToSection(PageSection.Projects)"
-                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer px-4"
-                :class="{ 'underline': activePageSection === PageSection.Projects }">Projects</span>
+                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer"
+                :class="{ 'underline': activePageSection === PageSection.Projects, 'px-4': activePageSection !== null }">Projects</span>
             <span @click="scrollToSection(PageSection.Contact)"
-                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer px-4"
-                :class="{ 'underline': activePageSection === PageSection.Contact }">Contact</span>
+                class="text-30px c-black font-league-gothic hover:underline hover:cursor-pointer"
+                :class="{ 'underline': activePageSection === PageSection.Contact, 'px-4': activePageSection !== null }">Contact</span>
         </div>
     </div>
 </template>
