@@ -34,6 +34,9 @@ const disciplines = ref([{
         img: "/img/logo/bootstrap.svg",
         name: "Bootstrap"
     }, {
+        img: "/img/logo/nextjs.svg",
+        name: "NextJS"
+    }, {
         img: "/img/logo/redux.svg",
         name: "Redux"
     }, {
