@@ -13,9 +13,14 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "icon", href: "/favicon-16x16.png" },
-        { rel: "icon", href: "/favicon-32x32.png" },
-        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "icon", href: "/favicon-16x16.png", sizes: "16x16" },
+        { rel: "icon", href: "/favicon-32x32.png", sizes: "32x32" },
+        {
+          rel: "apple-touch-icon",
+          href: "/apple-touch-icon.png",
+          sizes: "180x180",
+        },
+        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#FFFAFF" },
       ],
       meta: [
         {
@@ -23,6 +28,7 @@ export default defineNuxtConfig({
           content: "default",
         },
         { name: "theme-color", content: "#FFFAFF" },
+        { name: "msapplication-TileColor", content: "#FFFAFF"},
         { name: "apple-mobile-web-app-capable", content: "yes" },
       ],
     },
